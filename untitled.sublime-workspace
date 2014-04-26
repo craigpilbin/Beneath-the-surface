@@ -1,0 +1,793 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wi",
+				"width"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"or",
+				"originalCols"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"row",
+				"row"
+			],
+			[
+				"sel",
+				"selectedBox"
+			],
+			[
+				"se",
+				"selectedBox"
+			],
+			[
+				"sele",
+				"selectedBox"
+			],
+			[
+				"inf",
+				"infoBox"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"s",
+				"s"
+			],
+			[
+				"ro",
+				"row-data"
+			],
+			[
+				"the",
+				"theBox"
+			],
+			[
+				"selected",
+				"selectedRow"
+			],
+			[
+				"elem",
+				"elemCount"
+			],
+			[
+				"imgh",
+				"imgHeight"
+			],
+			[
+				"img",
+				"imgWidth"
+			],
+			[
+				"col",
+				"col"
+			],
+			[
+				"han",
+				"handleOriginalTop"
+			],
+			[
+				"h",
+				"handleOriginalTop"
+			],
+			[
+				"ha",
+				"handleOriginalTop"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"li",
+				"link-box"
+			],
+			[
+				"off",
+				"offsetHeight"
+			],
+			[
+				"b",
+				"boxSlider"
+			],
+			[
+				"chees",
+				"cheese-blocks"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"arrow",
+				"arrowWidth"
+			],
+			[
+				"cont",
+				"control-content"
+			],
+			[
+				"offset",
+				"offsetHeight"
+			],
+			[
+				"t",
+				"top"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"ma",
+				"main-menu"
+			],
+			[
+				"im",
+				"imgWidth"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"cus",
+				"custom-scroll"
+			],
+			[
+				"select",
+				"selectedCheese"
+			],
+			[
+				"ar",
+				"arrow"
+			],
+			[
+				"dr",
+				"dragDist"
+			],
+			[
+				"mo",
+				"moveY"
+			],
+			[
+				"drag",
+				"dragDist"
+			],
+			[
+				"las",
+				"lastDrag"
+			],
+			[
+				"selecte",
+				"selectedData"
+			],
+			[
+				"fonts",
+				"fontsize"
+			],
+			[
+				"last",
+				"lastVal"
+			],
+			[
+				"ne",
+				"nextVal"
+			],
+			[
+				"inn",
+				"innerData"
+			],
+			[
+				"new",
+				"newLock"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"genera",
+				"generateRandom"
+			],
+			[
+				"next",
+				"nextVal"
+			],
+			[
+				"locke",
+				"lockedReel"
+			],
+			[
+				"lo",
+				"lockedReel"
+			],
+			[
+				"sp",
+				"spinning"
+			],
+			[
+				"spin",
+				"spinning"
+			],
+			[
+				"spi",
+				"spinCount"
+			],
+			[
+				"alig",
+				"alignCount"
+			],
+			[
+				"move",
+				"moveY"
+			],
+			[
+				"is",
+				"is_touch_device"
+			],
+			[
+				"mov",
+				"moveTo"
+			],
+			[
+				"temp",
+				"tempMoveTo"
+			],
+			[
+				"m",
+				"moveTo"
+			],
+			[
+				"team",
+				"team-section-row"
+			],
+			[
+				"bread",
+				"breadcrumb-active"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"page",
+				"page-content"
+			],
+			[
+				"r",
+				"radius"
+			],
+			[
+				"hover",
+				"hover-box"
+			],
+			[
+				"ho",
+				"hover-box"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"font",
+				"fontStyle"
+			],
+			[
+				"pr",
+				"preventDefault"
+			],
+			[
+				"mou",
+				"mouseLastPos"
+			],
+			[
+				"mouse",
+				"mouseDownPos"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"get",
+				"getSelection"
+			],
+			[
+				"ch",
+				"checkBlocks"
+			],
+			[
+				"tr",
+				"translate"
+			],
+			[
+				"add",
+				"addBlocks"
+			],
+			[
+				"mous",
+				"mouseDownPos"
+			],
+			[
+				"reel",
+				"reel"
+			],
+			[
+				"init",
+				"initialize"
+			],
+			[
+				"gl",
+				"globalContent"
+			],
+			[
+				"glo",
+				"globalCtx"
+			],
+			[
+				"ge",
+				"getContext"
+			],
+			[
+				"glob",
+				"globalCtx"
+			],
+			[
+				"global",
+				"globalContent"
+			],
+			[
+				"co",
+				"containerWidth"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"block",
+				"inline-block"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"rss",
+				"rss-click-box"
+			],
+			[
+				"pading",
+				"padding-left"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"table-",
+				"table-cell"
+			],
+			[
+				"la",
+				"last-child"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"navba",
+				"navbar-form"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"ca",
+				"canvas	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 709,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/index.html",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/css/bootstrap.css",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/COE.sublime-workspace",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/COE.sublime-project",
+		"/Users/craigpilbin/SkyDrive/Projects/2014-04 - JusBox/Build/index.html",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/videos.html",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/js/jquery.shapeshift.js",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/js/jquery.shapeshift.min.js",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/js/coeApp.js",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/js/coeSlider.js",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/coe-slider.html",
+		"/Users/craigpilbin/SkyDrive/Projects/2014-04 - JusBox/Build/_/js/script.js",
+		"/Users/craigpilbin/SkyDrive/Projects/2014-04 - JusBox/Build/_/css/stylesheet.css",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/css/coeSliderStyle.css",
+		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/ajax_content.html",
+		"/Users/craigpilbin/Documents/Sites/index.html",
+		"/Users/craigpilbin/Desktop/COE/COE Slider/js/jscrollpane.min.js",
+		"/Users/craigpilbin/Desktop/COE/COE Slider/js/mwheelIntent.js",
+		"/Users/craigpilbin/Desktop/COE/COE Slider/js/jquery.mousewheel.js",
+		"/Users/craigpilbin/Documents/NiftIT/slot-machine/css/style.css",
+		"/Users/craigpilbin/Documents/NiftIT/slot-machine/js/coeApp.js",
+		"/Users/craigpilbin/Google Drive/Plugins/ACF/ACF Examples.php",
+		"/Users/craigpilbin/Desktop/COE/Slot Machine/js/detectmobilebrowser.js",
+		"/Users/craigpilbin/Desktop/COE/Slot Machine/index.html",
+		"/Users/craigpilbin/Desktop/COE/Slot Machine/css/style.css",
+		"/Users/craigpilbin/Desktop/COE/Slot Machine/js/coeApp.js",
+		"/Users/craigpilbin/Documents/WMWT/git-test/Here is a text file",
+		"/Users/craigpilbin/Desktop/Libertas/jquery.cycle.all.js",
+		"/Users/craigpilbin/Desktop/lib header backup.html",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1393225571/uapcg-dev/uapcg/wp-content/themes/WMWT_Blank_Theme_v2/page-about.php",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1393225610/uapcg-dev/uapcg/wp-content/themes/WMWT_Blank_Theme_v2/style.css",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1393235616/uapcg-dev/uapcg/wp-content/themes/WMWT_Blank_Theme_v2/page-team.php",
+		"/Users/craigpilbin/Desktop/Plugins/hoverbox-backup.js",
+		"/Users/craigpilbin/Desktop/hoverbox/index.html",
+		"/Users/craigpilbin/Desktop/hoverbox/css/style.css",
+		"/Users/craigpilbin/Desktop/hoverbox/css/hoverbox.css",
+		"/Users/craigpilbin/Desktop/hoverbox/js/hoverbox.js",
+		"/Users/craigpilbin/Desktop/hoverbox/js/main.js",
+		"/Users/craigpilbin/Desktop/COE/Slot Machine/js/main.js",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/js/main.js",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/js/prev.js",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/index.html",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/css/style.css",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/js/data.js",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1390563032/ServerNode/home/node/httpServer.js",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1390563002/ServerNode/home/craigo/httpServer/httpServer.js",
+		"/Users/craigpilbin/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/craigpilbin/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/ServerNode",
+		"/Users/craigpilbin/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/ServerWWW",
+		"/Users/craigpilbin/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/homeserver",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/data/data.json",
+		"/Users/craigpilbin/Desktop/ScreenSize.io/data/file.json",
+		"/Users/craigpilbin/Documents/NiftIT/NYU/homepage.html",
+		"/Users/craigpilbin/Documents/NiftIT/NYU/_/css/nyu-spritesheet.css",
+		"/Users/craigpilbin/Documents/NiftIT/NYU/_/css/bootstrap.css",
+		"/Users/craigpilbin/Documents/NiftIT/NYU/_/css/bootstrap-theme.css",
+		"/Users/craigpilbin/Desktop/niftit-logo/css/niftit-logo.css",
+		"/Users/craigpilbin/Desktop/niftit-logo/index.html",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1386684569/uapcg-dev/uapcg/wp-content/themes/WMWT_Blank_Theme_v2/page-contact.php",
+		"/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/sublime-sftp-browse-1386679433/uapcg-dev/uapcg/wp-content/themes/WMWT_Blank_Theme_v2/js/plugins.js",
+		"/Users/craigpilbin/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/uapcg-dev",
+		"/private/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/fz3temp-1/wmwt_blank.info",
+		"/private/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/fz3temp-1/page.tpl.php",
+		"/private/var/folders/z4/0y5npvp90xv71xg6wspt4_lc0000gn/T/fz3temp-1/html.tpl.php",
+		"/Users/craigpilbin/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/wmwtftp",
+		"/Users/craigpilbin/Documents/Programming/stooopidgames/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"coeApp",
+			"link-box-inner",
+			"col-xs-12",
+			"1-cheese",
+			"console",
+			"first-row",
+			"child.el",
+			"console",
+			"cons",
+			"child",
+			"cons",
+			"console",
+			"child_positions",
+			"console",
+			"consol",
+			"savePosition",
+			"media",
+			"left",
+			"background",
+			"dragging",
+			"title",
+			"arrow",
+			"circle",
+			"consol",
+			"console.log",
+			"mouseDownPos",
+			"mouseLastPos",
+			"reel.reel",
+			"mouseDownPos",
+			"reel.translate",
+			"800",
+			"Aspect Ratio",
+			"Diagonal",
+			"Width",
+			"Height",
+			"Pixels Per Inch",
+			"Resolution",
+			"IOS Version",
+			"Device",
+			"rss-entry-title",
+			"search",
+			"event",
+			"sear",
+			"row-title",
+			"navbar-ri",
+			"search",
+			"form-group",
+			"sear",
+			"56058c",
+			"s4-body",
+			"gray",
+			"s4-body",
+			"color",
+			"navbar-nav",
+			"ul",
+			"glyphicon-edit",
+			"glyphicon",
+			"edit",
+			"form-group",
+			"navbar-form",
+			"float",
+			"form-group",
+			"navbar-form",
+			"float",
+			"main-nav",
+			"media",
+			"0xeee",
+			"console",
+			"move",
+			"current",
+			"items.eq",
+			"index",
+			"\n           ",
+			"                <li><img src=\"<?php bloginfo('template_url'); ?>/images/image-03.jpg\" alt=\"\" /></li>\n",
+			"main m"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
