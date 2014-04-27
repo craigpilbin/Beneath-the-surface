@@ -40,9 +40,15 @@ $(document).ready(function(){
 
 			this.player.anchor.setTo(0.5,0.5);
 
-			this.player.animations.add('swim', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 12, true);
+			this.player.animations.add('swim', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 16, true);
 			
+			this.player.animations.add('swimFast', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 30, true);
+
+			this.player.animations.add('swimSlow', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 10, true);
+
 			this.player.animations.play('swim');
+
+			this.player.body.immovable = true;
 
 			controls = this.game.input.keyboard.createCursorKeys();
 
@@ -56,7 +62,7 @@ $(document).ready(function(){
 
 			this.emit = game.add.emitter(this.game.world.centerX, h / 3 - 37, 250);
 
-			this.emit.makeParticles('emit', [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30], 200, true, true);
+			this.emit.makeParticles('emit', [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 200, true, true);
 
 			this.emit.minParticleSpeed.setTo(-200, -300);
 		    
@@ -66,42 +72,22 @@ $(document).ready(function(){
 
 		    this.emit.maxParticleScale = 1.3;
 
-		    this.emit.start(false, 400, 40);
+		    this.emit.start(false, 800, 60);
 
-		    console.log(this.emit);
+		    console.log(this.player.animations);
 		},
 
 		update: function(){
 
 			this.player.body.velocity.setTo(0, 0);
 			
-    		if(controls.down.isDown){
-
-	        	this.bubble.body.velocity.y = -400;
-
-	        	this.emit.frequency = 5;
-
-	    	} else if(controls.up.isDown) {
-
-	        	this.bubble.body.velocity.y = -100;
-
-	        	this.emit.frequency = 150;
-
-	    	} else {
-
-	    		this.bubble.body.velocity.y = -200;
-
-	    		this.emit.frequency = 60;
-
-	    	}
-
-		    if(controls.left.isDown){
+			if(controls.left.isDown){
 
 		    	this.leanAnim(20);
 
 		    	this.emit.emitX = this.player.position.x + 10;
 
-		        this.player.body.velocity.x = -200;
+		        this.player.body.velocity.x = -250;
 
 		    } else if(controls.right.isDown){
 
@@ -109,7 +95,7 @@ $(document).ready(function(){
 
 		    	this.emit.emitX = this.player.position.x - 10;
 
-		        this.player.body.velocity.x = 200;
+		        this.player.body.velocity.x = 250;
 
 		    } else {
 
@@ -120,6 +106,52 @@ $(document).ready(function(){
 		    	this.emit.emitY = this.player.position.y - this.player.height / 2;
 
 		    }
+
+    		if(controls.down.isDown){
+
+	        	this.bubble.body.velocity.y = -400;
+
+	        	this.emit.frequency = 10;
+
+	        	this.player.animations.play('swimFast');
+
+	        	if(controls.left.isDown){
+
+	        		this.player.body.velocity.x = -350;
+
+	        	} else if(controls.right.isDown){
+
+	        		this.player.body.velocity.x = 350;
+
+	        	}
+
+	    	} else if(controls.up.isDown) {
+
+	        	this.bubble.body.velocity.y = -100;
+
+	        	this.emit.frequency = 150;
+
+	        	this.player.animations.play('swimSlow');
+
+	        	if(controls.left.isDown){
+
+	        		this.player.body.velocity.x = -200;
+
+	        	} else if(controls.right.isDown){
+
+	        		this.player.body.velocity.x = 200;
+
+	        	}
+
+	    	} else {
+
+	    		this.bubble.body.velocity.y = -200;
+
+	    		this.emit.frequency = 60;
+
+	    		this.player.animations.play('swim');
+
+	    	}
 
 			this.healthBar.scale.x -= 0.5;
 
@@ -157,9 +189,9 @@ $(document).ready(function(){
 
 		},
 
-		collision: function(){
+		collision: function(pl, ox){
 
-			this.bubble.destroy();
+			ox.destroy();
 
 			this.healthBar.scale.x += 50;
 
