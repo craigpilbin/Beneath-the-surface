@@ -2,8 +2,6 @@
 *	Beneath the surface
 *	-------------------
 *
-*	Authors: Team Niftit!
-*
 ***/
 
 $(document).ready(function(){
@@ -16,20 +14,17 @@ $(document).ready(function(){
 		player = {},
 		controls = {},
 		bubble,
-		bubble2,
-		bubbles = [],
-		bg;
+		bubbles = {
+			speed: -50
+		},
+		fixed;
 
 	function preload() {
 
-		game.load.image('bg', 'assets/bg.png');
-		
 		game.load.atlasXML('player', 'assets/penguin-swim.png', 'assets/penguin-swim.xml');
 		
 		game.load.image('bubble', 'assets/bubble.png');
-		//game.load.atlas('player', 'assets/penguin-swim.png', 'assets/penguin-swim.json');
-		//game.load.image('player', 'assets/penguin-swim.png');
-		
+				
 
 		
 
@@ -46,38 +41,30 @@ $(document).ready(function(){
 
 	function create() {
 		
-		// Add the background to the stage
-		bg = game.add.sprite(game.world.centerX, game.world.centerY, 'bg');
-		bg.anchor.setTo(0.5, 0.5);
-
+		// Background color
+		game.stage.backgroundColor = '#324d5c';
+		//game.world.setBounds(0, 0, game.world.bounds.width, 1000);
 		// Create an instance of the player
 		player = new Player(game);
 		player.create();
 
 		// Bubbles
-		//bubble = game.add.sprite(game.world.randomX, game.world.centerY, 'bubble');
-		//bubble2 = game.add.sprite(game.world.randomX, game.world.centerY + 100, 'bubble');
-		//bubble.anchor.setTo(0.5,0.5);
-		//bubble2.anchor.setTo(0.5,0.5);
-		
-		//bubbles = game.add.group();
+		bubbles.group = game.add.group();
 
 		for(var i = 0; i < 3; i++){
-			bubbles[i] = game.add.sprite(game.world.randomX, game.world.randomY, 'bubble');
-			bubbles[i].body.velocity.y = -50;
+			
+			bubble = bubbles.group.create(game.world.randomX, game.world.randomY + game.world.bounds.height, 'bubble');
+			bubble.anchor.setTo(0.5,0.5);
+			bubble.body.velocity.y = bubbles.speed;
+
 		}
 
 		
 
-		console.log(bubbles);
-		// Setup controls
-		controls.down = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
-		controls.up = game.input.keyboard.addKey(Phaser.Keyboard.UP);
-		controls.left = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
-		controls.right = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+    	cursors = game.input.keyboard.createCursorKeys();
+    	
 
-
-
+    	console.log();
 		/* REFERENCE EXAMPLE CODE
 		// Add Tile map
 		map = game.add.tilemap('map');
@@ -93,19 +80,30 @@ $(document).ready(function(){
 
 	function update() {
 		
-		if(controls.down.isDown){
-			console.log("Down");
-		} else if(controls.up.isDown){
-			console.log("up");
-		}
-		
-		if(controls.left.isDown){
-			console.log("Left");
-		} else if(controls.right.isDown){
-			console.log("right");
-		}
-		
+		player.resetVel();
 
+    	if(cursors.up.isDown){
+	        player.velocityY(-200);
+	    } else if(cursors.down.isDown) {
+	        player.velocityY(200);
+	    }
+
+	    if(cursors.left.isDown){
+	        player.velocityX(-200);
+	    } else if(cursors.right.isDown){
+	        player.velocityX(200);
+	    }
+		
+		game.world.forEach(function(bubble) {
+			
+        	if(bubble.position.y < 0){
+        		bubbles.group.remove(bubble);
+        		bubble = bubbles.group.create(game.world.randomX, game.world.bounds.height + 50, 'bubble');
+				bubble.anchor.setTo(0.5,0.5);
+				bubble.body.velocity.y = bubbles.speed;
+        	}
+        	
+    	});
 		
 
 		/* REFERENCE EXAMPLE CODE
