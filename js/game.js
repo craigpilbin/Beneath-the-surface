@@ -42,38 +42,77 @@ $(document).ready(function(){
 
 			controls = this.game.input.keyboard.createCursorKeys();
 
-			this.bubble = this.game.add.sprite(this.game.world.randomX, this.game.world.randomY, 'bubble');
-
+			this.bubble = this.game.add.sprite(this.game.world.randomX, this.game.height - 20, 'bubble');
+			console.log(this.bubble);
 		},
 
 		update: function(){
 
 			this.player.body.velocity.setTo(0, 0);
 			
-    		if(controls.up.isDown){
+    		if(controls.down.isDown){
 
-	        	this.bubble.body.velocity.y = -200;
+	        	this.bubble.body.velocity.y = -400;
 
-	    	} else if(controls.down.isDown) {
+	    	} else if(controls.up.isDown) {
 
-	        	//this.player.body.velocity.y = 200;
+	        	this.bubble.body.velocity.y = -100;
+
+	    	} else {
+
+	    		this.bubble.body.velocity.y = -200;
+
 	    	}
 
 		    if(controls.left.isDown){
+
+		    	this.leanAnim(20);
 
 		        this.player.body.velocity.x = -200;
 
 		    } else if(controls.right.isDown){
 
+		    	this.leanAnim(-20);
+
 		        this.player.body.velocity.x = 200;
 
+		    } else {
+
+		    	this.leanAnim(0);
+
 		    }
+
+		    this.bubble.outOfBoundsKill = true;
+
+		    if(this.bubble.alive == false){
+		    	
+		    	this.bubble = this.game.add.sprite(this.game.world.randomX - 20, this.game.height - 20, 'bubble');
+
+		    }
+
+		    this.game.physics.collide(this.player, this.bubble, this.collision, null, this);
 
 		    if(this.player.inWorld == false){
 
 		    	this.restart_game();
 
 		    }
+
+		},
+
+		leanAnim: function(arg){
+
+			var anim = this.game.add.tween(this.player);
+
+			anim.to({ angle: arg }, 20);
+
+			anim.start();
+
+		},
+
+		collision: function(){
+
+			this.bubble.destroy();
 
 		},
 
