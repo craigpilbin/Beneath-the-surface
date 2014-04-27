@@ -7,18 +7,12 @@
 $(document).ready(function(){
 
 	var h = $(window).height(),
-		playWidth = (h / 3) * 2;
+		playWidth = (h / 3) * 2,
+		topScore = 0;
 
 	var game = new Phaser.Game(playWidth, h, Phaser.AUTO, '');
 
-	/*
-	game.state.add('load', load_state);  
-	game.state.add('menu', menu_state);  
-	game.state.add('play', play_state);  
-	game.state.start('load');
-	*/
-
-	var play_state = {
+	var menu_state = {
 
 		preload: function(){
 
@@ -37,6 +31,36 @@ $(document).ready(function(){
 			this.game.load.atlasXML('fish2', 'assets/fish2.png', 'assets/fish2.xml');
 
 		},
+
+		create: function(){
+
+			this.style = { font: "20px Arial", fill: "#ffffff" };
+        	
+        	if(topScore !== 0){
+
+        		this.scoreText.destroy();
+
+        		this.scoreText = this.game.add.text(this.game.width / 2, 80, "Top Score: " + topScore, this.style);
+
+        	}
+
+        	this.scoreText = this.game.add.text(this.game.width / 2, this.game.height / 2, "Hit space to start!", this.style);
+
+        	this.spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        	
+        	this.spaceKey.onDown.add(this.start, this); 
+
+		},
+
+		start: function(){
+
+			game.state.start('play');
+
+		}
+
+	}
+
+	var play_state = {
 
 		create: function(){
 
@@ -78,7 +102,7 @@ $(document).ready(function(){
 
 			this.bubble = this.game.add.sprite(this.game.world.randomX, this.game.height - 20, 'bubble');
 
-			this.bubble.bubbleScale = game.rnd.realInRange(0.2, 1.5);
+			this.bubble.bubbleScale = game.rnd.realInRange(0.2, 1);
 
 			this.bubble.scale.x = this.bubble.bubbleScale;
 
@@ -109,12 +133,20 @@ $(document).ready(function(){
 		    this.collideEmit.makeParticles('emit');
 
 		    this.collideEmit.gravity = -200;
+
+		    this.score = 0;
+
+		    this.style = { font: "20px Arial", fill: "#ffffff" };
+        
+        	this.scoreText = this.game.add.text(40, 40, "score: " + this.score, this.style);
 		    
 		},
 
 		update: function(){
 
 			this.player.body.velocity.setTo(0, 0);
+
+			this.scoreText.destroy();
 			
 			if(controls.left.isDown){
 
@@ -260,13 +292,17 @@ $(document).ready(function(){
 		    	
 		    	this.bubble = this.game.add.sprite(this.game.world.randomX - 20, this.game.height - 20, 'bubble');
 
-		    	this.bubble.bubbleScale = game.rnd.realInRange(0.2, 1.5);
+		    	this.bubble.bubbleScale = game.rnd.realInRange(0.2, 1);
 
 				this.bubble.scale.x = this.bubble.bubbleScale;
 
 				this.bubble.scale.y = this.bubble.bubbleScale;
 
 		    }
+
+		    this.score += Math.abs(this.bubble.body.velocity.y) / 200;
+
+		    this.scoreText = this.game.add.text(40, 40, "score: " + this.score, this.style);
 
 		    this.game.physics.collide(this.player, this.bubble, this.collision, null, this);
 
@@ -314,18 +350,23 @@ $(document).ready(function(){
 
 		restart_game: function(){
 
-			this.game.state.start('play');
+			this.scoreText.destroy();
+
+			if(this.score > topScore){
+
+				topScore = this.score;
+
+			}
+
+			this.game.state.start('menu');
 
 		}
 
 	}
 
+	game.state.add('menu', menu_state);
 	game.state.add('play', play_state);
-	game.state.start('play');
+	game.state.start('menu');
 
 });
-
-
-
-
 
