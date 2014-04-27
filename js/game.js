@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 			this.game.stage.backgroundColor = '#324d5c';
 
-			this.game.load.atlasXML('player', 'assets/penguin-swim.png', 'assets/penguin-swim.xml');
+			this.game.load.atlasXML('player', 'assets/penguinswim.png', 'assets/penguinswim.xml');
 
 			this.game.load.image('bubble', 'assets/bubble.png');
 
@@ -40,11 +40,11 @@ $(document).ready(function(){
 
 			this.player.anchor.setTo(0.5,0.5);
 
-			this.player.animations.add('swim', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 16, true);
+			this.player.animations.add('swim', Phaser.Animation.generateFrameNames('penguinswim', 0, 9, '', 4), 16, true);
 			
-			this.player.animations.add('swimFast', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 30, true);
+			this.player.animations.add('swimFast', Phaser.Animation.generateFrameNames('penguinswim', 0, 9, '', 4), 30, true);
 
-			this.player.animations.add('swimSlow', Phaser.Animation.generateFrameNames('penguinswim', 0, 11, '', 4), 10, true);
+			this.player.animations.add('swimSlow', Phaser.Animation.generateFrameNames('penguinswim', 0, 9, '', 4), 10, true);
 
 			this.player.animations.play('swim');
 

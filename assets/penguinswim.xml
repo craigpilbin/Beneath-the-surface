@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:8552e4e246731e44fe1896218bc4b0ea:7c9d8e459141a44af67604de71042f2e:7df1b8f466c6999e918af31c7815dddd$ -->
+<TextureAtlas imagePath="penguinswim.png">
+    <SubTexture name="penguinswim0000" x="2" y="652" width="32" height="70"/>
+    <SubTexture name="penguinswim0001" x="2" y="580" width="32" height="70"/>
+    <SubTexture name="penguinswim0002" x="2" y="75" width="32" height="71"/>
+    <SubTexture name="penguinswim0003" x="2" y="2" width="32" height="71"/>
+    <SubTexture name="penguinswim0004" x="2" y="508" width="32" height="70"/>
+    <SubTexture name="penguinswim0005" x="2" y="436" width="32" height="70"/>
+    <SubTexture name="penguinswim0006" x="2" y="364" width="32" height="70"/>
+    <SubTexture name="penguinswim0007" x="2" y="292" width="32" height="70"/>
+    <SubTexture name="penguinswim0008" x="2" y="220" width="32" height="70"/>
+    <SubTexture name="penguinswim0009" x="2" y="148" width="32" height="70"/>
+</TextureAtlas>
