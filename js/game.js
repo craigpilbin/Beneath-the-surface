@@ -28,6 +28,8 @@ $(document).ready(function(){
 
 			this.game.load.image('bubble', 'assets/bubble.png');
 
+			this.game.load.image('healthBar', 'assets/healthBar.png');
+
 		},
 
 		create: function(){
@@ -43,7 +45,15 @@ $(document).ready(function(){
 			controls = this.game.input.keyboard.createCursorKeys();
 
 			this.bubble = this.game.add.sprite(this.game.world.randomX, this.game.height - 20, 'bubble');
-			console.log(this.bubble);
+
+			this.healthBar = this.game.add.sprite(this.game.world.width, 20, 'healthBar');
+
+			this.healthBar.anchor.setTo(0.5,0.5);
+
+			this.healthBar.scale.x = 200;
+
+			console.log(this.healthBar);
+
 		},
 
 		update: function(){
@@ -82,6 +92,14 @@ $(document).ready(function(){
 
 		    }
 
+		    this.healthBar.scale.x -= 0.5;
+
+		    if(this.healthBar.scale.x <= 0){
+
+		    	this.restart_game();
+
+		    }
+
 		    this.bubble.outOfBoundsKill = true;
 
 		    if(this.bubble.alive == false){
@@ -113,6 +131,8 @@ $(document).ready(function(){
 		collision: function(){
 
 			this.bubble.destroy();
+
+			this.healthBar.scale.x += 50;
 
 		},
 
