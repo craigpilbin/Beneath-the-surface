@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 		    this.emit.maxParticleScale = 1.3;
 
-		    this.emit.start(false, 800, 40);
+		    this.emit.start(false, 400, 40);
 
 		    console.log(this.emit);
 		},
