@@ -32,6 +32,10 @@ $(document).ready(function(){
 
 			this.game.load.image('emit', 'assets/emit.png');
 
+			this.game.load.image('fish1', 'assets/fish1.png');
+
+			this.game.load.atlasXML('fish2', 'assets/fish2.png', 'assets/fish2.xml');
+
 		},
 
 		create: function(){
@@ -49,6 +53,26 @@ $(document).ready(function(){
 			this.player.animations.play('swim');
 
 			this.player.body.immovable = true;
+	
+			this.fish1 = this.game.add.sprite(20, this.game.world.randomY + this.game.height / 2, 'fish1');
+
+			this.fish1.anchor.setTo(0.5,0.5);
+
+			this.fish1.scale.x /= 2;
+
+			this.fish1.scale.y /= 2;
+
+			this.fish2 = this.game.add.sprite(this.game.width + 20, this.game.world.randomY + this.game.height / 2, 'fish2');
+
+			this.fish2.anchor.setTo(0.5,0.5);
+
+			this.fish2.scale.x /= 2;
+
+			this.fish2.scale.y /= 2;
+
+			this.fish2.animations.add('fishswim', Phaser.Animation.generateFrameNames('fish2', 0, 9, '', 4), 16, true);
+			
+			this.fish2.animations.play('fishswim');
 
 			controls = this.game.input.keyboard.createCursorKeys();
 
@@ -80,6 +104,11 @@ $(document).ready(function(){
 
 		    this.emit.start(false, 800, 60);
 
+		    this.collideEmit = game.add.emitter(0,0,200);
+
+		    this.collideEmit.makeParticles('emit');
+
+		    this.collideEmit.gravity = -200;
 		    
 		},
 
@@ -117,6 +146,10 @@ $(document).ready(function(){
 
 	        	this.bubble.body.velocity.y = -400;
 
+	        	this.fish1.body.velocity.y = -200;
+
+	        	this.fish2.body.velocity.y = -200;
+
 	        	this.emit.frequency = 10;
 
 	        	this.player.animations.play('swimFast');
@@ -134,6 +167,10 @@ $(document).ready(function(){
 	    	} else if(controls.up.isDown) {
 
 	        	this.bubble.body.velocity.y = -100;
+
+	        	this.fish1.body.velocity.y = -50;
+
+	        	this.fish2.body.velocity.y = -50;
 
 	        	this.emit.frequency = 150;
 
@@ -159,11 +196,61 @@ $(document).ready(function(){
 
 	    	}
 
+			this.fish1.body.velocity.x = 60;
+
+	    	this.fish1.body.velocity.y = -100;
+
+	    	this.fish2.body.velocity.x = -90;
+
+	    	this.fish2.body.velocity.y = -100;
+
+	    	this.fish1.angle += game.rnd.realInRange(0, 0.5);;
+
 			this.healthBar.scale.x -= 0.5;
 			
 		    if(this.healthBar.scale.x <= 0){
 
 		    	this.restart_game();
+
+		    }
+
+		    if(this.fish1.outOfBoundsKill == false){
+		    	
+		    	this.fish1.outOfBoundsKill = true;
+		    	
+		    }
+
+		    if(this.fish1.alive == false){
+
+		    	this.fish1 = this.game.add.sprite(20, this.game.world.randomY + this.game.height / 2, 'fish1');
+
+				this.fish1.anchor.setTo(0.5,0.5);
+
+				this.fish1.scale.x /= 2;
+
+				this.fish1.scale.y /= 2;
+
+		    }
+		    
+		    if(this.fish2.outOfBoundsKill == false){
+		    	
+		    	this.fish2.outOfBoundsKill = true;
+		    	
+		    }
+
+		    if(this.fish2.alive == false){
+
+		    	this.fish2 = this.game.add.sprite(this.game.width + 20, this.game.world.randomY + this.game.height / 2, 'fish2');
+
+				this.fish2.anchor.setTo(0.5,0.5);
+
+				this.fish2.scale.x /= 2;
+
+				this.fish2.scale.y /= 2;
+
+				this.fish2.animations.add('fishswim', Phaser.Animation.generateFrameNames('fish2', 0, 9, '', 4), 16, true);
+				
+				this.fish2.animations.play('fishswim');
 
 		    }
 
@@ -182,6 +269,10 @@ $(document).ready(function(){
 		    }
 
 		    this.game.physics.collide(this.player, this.bubble, this.collision, null, this);
+
+		    this.game.physics.collide(this.player, this.fish1, this.kill, null, this);
+
+		    this.game.physics.collide(this.player, this.fish2, this.kill, null, this);
 
 		    if(this.player.inWorld == false){
 
@@ -205,9 +296,19 @@ $(document).ready(function(){
 
 			this.healthBar.scale.x += (50 * ox.bubbleScale);
 			
+			this.collideEmit.x = ox.position.x;
+
+			this.collideEmit.y = ox.position.y;
+
 			ox.destroy();
 
-			
+			this.collideEmit.start(true, 2000, null, 10);
+
+		},
+
+		kill: function(){
+
+			this.restart_game();
 
 		},
 
