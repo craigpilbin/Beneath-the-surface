@@ -54,6 +54,12 @@ $(document).ready(function(){
 
 			this.bubble = this.game.add.sprite(this.game.world.randomX, this.game.height - 20, 'bubble');
 
+			this.bubble.bubbleScale = game.rnd.realInRange(0.2, 1.5);
+
+			this.bubble.scale.x = this.bubble.bubbleScale;
+
+			this.bubble.scale.y = this.bubble.bubbleScale;
+
 			this.healthBar = this.game.add.sprite(this.game.world.width, 20, 'healthBar');
 
 			this.healthBar.anchor.setTo(0.5,0.5);
@@ -74,7 +80,7 @@ $(document).ready(function(){
 
 		    this.emit.start(false, 800, 60);
 
-		    console.log(this.player.animations);
+		    
 		},
 
 		update: function(){
@@ -154,7 +160,7 @@ $(document).ready(function(){
 	    	}
 
 			this.healthBar.scale.x -= 0.5;
-
+			
 		    if(this.healthBar.scale.x <= 0){
 
 		    	this.restart_game();
@@ -166,6 +172,12 @@ $(document).ready(function(){
 		    if(this.bubble.alive == false){
 		    	
 		    	this.bubble = this.game.add.sprite(this.game.world.randomX - 20, this.game.height - 20, 'bubble');
+
+		    	this.bubble.bubbleScale = game.rnd.realInRange(0.2, 1.5);
+
+				this.bubble.scale.x = this.bubble.bubbleScale;
+
+				this.bubble.scale.y = this.bubble.bubbleScale;
 
 		    }
 
@@ -191,9 +203,11 @@ $(document).ready(function(){
 
 		collision: function(pl, ox){
 
+			this.healthBar.scale.x += (50 * ox.bubbleScale);
+			
 			ox.destroy();
 
-			this.healthBar.scale.x += 50;
+			
 
 		},
 
