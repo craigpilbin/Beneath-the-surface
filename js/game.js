@@ -10,7 +10,7 @@ $(document).ready(function(){
 		playWidth = (h / 3) * 2,
 		topScore = 0;
 
-	var game = new Phaser.Game(playWidth, h, Phaser.AUTO, '');
+	var game = new Phaser.Game(playWidth, h, Phaser.CANVAS, '');
 
 	var menu_state = {
 
@@ -126,9 +126,9 @@ $(document).ready(function(){
 
 		    this.emit.maxParticleScale = 1.3;
 
-		    this.emit.start(false, 800, 60);
+		    this.emit.start(false, 700, 60);
 
-		    this.collideEmit = game.add.emitter(0,0,200);
+		    this.collideEmit = game.add.emitter(0,0,50);
 
 		    this.collideEmit.makeParticles('emit');
 
