@@ -4,8 +4,100 @@
 		"selected_items":
 		[
 			[
-				"wi",
+				"score",
+				"scoreText"
+			],
+			[
+				"co",
+				"collideEmit"
+			],
+			[
+				"re",
+				"restart_game"
+			],
+			[
+				"fis",
+				"fish1"
+			],
+			[
+				"b",
+				"bubbleScale"
+			],
+			[
+				"bub",
+				"bubbleScale"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"cent",
+				"centerY"
+			],
+			[
+				"ce",
+				"centerX"
+			],
+			[
+				"le",
+				"leanAnim"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"PLA",
+				"player"
+			],
+			[
+				"w",
 				"width"
+			],
+			[
+				"velX",
+				"velX"
+			],
+			[
+				"ra",
+				"randomX"
+			],
+			[
+				"bu",
+				"bubble"
+			],
+			[
+				"c",
+				"centerY"
+			],
+			[
+				"an",
+				"animations"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"con",
+				"controls"
+			],
+			[
+				"d",
+				"down"
+			],
+			[
+				"K",
+				"Keyboard"
+			],
+			[
+				"cen",
+				"centerY"
+			],
+			[
+				"wi",
+				"window"
 			],
 			[
 				"back",
@@ -38,10 +130,6 @@
 			[
 				"inf",
 				"infoBox"
-			],
-			[
-				"c",
-				"c"
 			],
 			[
 				"s",
@@ -132,16 +220,8 @@
 				"offsetHeight"
 			],
 			[
-				"b",
-				"boxSlider"
-			],
-			[
 				"chees",
 				"cheese-blocks"
-			],
-			[
-				"con",
-				"content"
 			],
 			[
 				"arrow",
@@ -158,10 +238,6 @@
 			[
 				"t",
 				"top"
-			],
-			[
-				"d",
-				"document"
 			],
 			[
 				"bac",
@@ -392,10 +468,6 @@
 				"globalContent"
 			],
 			[
-				"co",
-				"containerWidth"
-			],
-			[
 				"background-",
 				"background-color"
 			],
@@ -406,10 +478,6 @@
 			[
 				"pad",
 				"padding"
-			],
-			[
-				"w",
-				"width"
 			],
 			[
 				"data",
@@ -446,32 +514,16 @@
 			[
 				"inline",
 				"inline-block"
-			],
-			[
-				"btn",
-				"btn-default"
-			],
-			[
-				"navba",
-				"navbar-form"
-			],
-			[
-				"in",
-				"inline-block"
-			],
-			[
-				"ca",
-				"canvas	Tag"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "js/game.js",
 			"settings":
 			{
-				"buffer_size": 709,
+				"buffer_size": 8221,
 				"line_ending": "Unix"
 			}
 		}
@@ -512,7 +564,21 @@
 	},
 	"file_history":
 	[
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/game.js",
 		"/Users/craigpilbin/Documents/Sites/Beneath the surface/index.html",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/phaser.min.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/load.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/menu.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/play.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/Old/game.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/Old/player.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/assets/penguin-swim.xml",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/terrain.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/enemies.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/player.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/css/styles.css",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/gamecontroller.js",
+		"/Users/craigpilbin/Documents/Sites/Beneath the surface/js/bg-objects.js",
 		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/css/bootstrap.css",
 		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/COE.sublime-workspace",
 		"/Users/craigpilbin/Documents/NiftIT/COE-Dev/COE.sublime-project",
@@ -692,18 +758,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "js/game.js",
 					"settings":
 					{
-						"buffer_size": 709,
+						"buffer_size": 8221,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								5660,
+								5660
 							]
 						],
 						"settings":
@@ -711,12 +777,11 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3205.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -788,6 +853,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true
 }

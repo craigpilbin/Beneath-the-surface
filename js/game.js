@@ -239,12 +239,6 @@ $(document).ready(function(){
 	    	this.fish1.angle += game.rnd.realInRange(0, 0.5);;
 
 			this.healthBar.scale.x -= 0.5;
-			
-		    if(this.healthBar.scale.x <= 0){
-
-		    	this.restart_game();
-
-		    }
 
 		    if(this.fish1.outOfBoundsKill == false){
 		    	
@@ -311,6 +305,12 @@ $(document).ready(function(){
 		    this.game.physics.collide(this.player, this.fish2, this.kill, null, this);
 
 		    if(this.player.inWorld == false){
+
+		    	this.restart_game();
+
+		    }
+
+		    if(this.healthBar.scale.x <= 0){
 
 		    	this.restart_game();
 
